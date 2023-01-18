@@ -1,0 +1,94 @@
+DOM  -document object model
+
+"The W3C Document Object Model (DOM) is a platform and
+language-neutral interface that allows programs and scripts to dynamically
+ access and update the content, structure, and style of a document."
+
+ Now the task of converting an HTML file into the DOM is done by the browser
+
+when you load up the web page. And what it does is that it turns each of these elements and their associated
+
+data into a tree structure with a whole bunch of objects that you can select and manipulate.
+//this is skeletal tree for basic html code
+              Document
+                  |
+                  HTML
+                  |
+          ----------------
+          head                body
+            |                |
+            title             button
+            |                |
+        my website           alert
+
+
+using develpoper tools we can change all properties of html elements
+dynamically using DoM
+some commands used were
+var heading = document.firstElementChild.lastElementChild.firstElementChild;//these are based on html tree (are sequential based on html code)
+heading.innerHTML="goodbye";//changes heading into goodbye
+heading.style.color="red";//changes color of heading to red
+document.qurySelector("input").click();//checks the check box in input tag
+
+object has properties and methods
+properties: color, number of seats(object is car)//getter functions and setter functions
+methods: brake();drive();
+
+
+document.getElementsByTagName("li");//array of  items with tag li.to access only one use identifier
+
+document.getElementsByTagName("li")[2].innerHTML="Ashritha";//3rd element,s title is changed to ashritha
+
+
+lly getelementsbyclass//returns array of elements
+get elementbyid //returns single element
+
+
+o for example, if I want to select our h1, then I can simply say h1 in here, or if I wanted to
+select it by its id, then I could say querySelector, and in here I would add that pound sign to show
+that I'm specifying an id, then I would use the id title, and still we would get back exactly the same thing.
+
+And it works exactly the same way with class as well. All we have to do is just add a dot in front, just
+
+as we did inside the CSS.
+
+So if I wanted our button then I can just say .btn and I would get back our button.
+
+But more importantly, I can combine our selectors and query for something that's quite specific.
+
+
+document.querySelector("li a ");//gives a inside li
+document.querySelector(" a ");//gives first a it can find
+//if multiple items satisfy, querySelector rreturns the first one it found.
+# for id
+. for class
+
+
+querySelectorAll returns multiple items //used more than getElement
+
+document.querySelector("button").style.backgroundColor="yellow";
+
+
+-> how to on and off features using js
+
+for a button add another class "invisible" using js or in html file
+in css file linked add invisible class with visibility as hidden
+now the button is hidden
+to make it visible remove it from class list of buttton
+document.querySelector("button").classList.remove("invisible");
+
+document.querySelector("button").classList.toggle("invisible");//if it is applied then remove,cif is not present then apply
+
+
+
+HTML is for content only, and your CSS is there to style
+your web site, and your Javascript is there for behavior.
+ideally,all of our styles should actually be inside our CSS. But the problem is that if we wanted our style
+
+
+-> innerHTML - everything inside h1 tag
+->testcontent - only the text part inside h1 tag
+
+Attributes of html tag are class , href etc
+document.querySelector("a").getAttribute("href");//output is the link inside a tag
+document.querySelector("a").setAttribute("href","https://www.bing.com");//old href is replaced with bing.com
